@@ -20,7 +20,8 @@ class CreateContactFormsTable extends Migration
             $table->string('e_mail', 255);
             $table->longText('url')->nullable($value = true);
             $table->boolean('gender');
-            $table->tinyInteger('votes');
+            $table->tinyInteger('age');
+            $table->string('contact', 200);
             $table->timestamps();
         });
     }
