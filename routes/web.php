@@ -16,3 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('tests/test', 'TestController@index');
+
+Route::group(['prefix' => 'contact', 'middleware' => 'auth'],function(){
+    Route::get('index', 'ContactFormController@index');
+});
+
+
+
